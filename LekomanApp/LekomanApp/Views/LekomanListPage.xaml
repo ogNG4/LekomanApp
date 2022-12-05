@@ -27,7 +27,7 @@
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
 
-
+                        
                         <Label HorizontalOptions="StartAndExpand" FontSize="20" TextColor="DarkBlue" Text="{Binding Lek}" />
                         <Label HorizontalOptions="StartAndExpand" FontSize="20" TextColor="DarkBlue" Text="{Binding Dawka}" />
 

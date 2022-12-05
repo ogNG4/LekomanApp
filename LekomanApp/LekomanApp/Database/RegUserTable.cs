@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LekomanApp.Tables
+namespace LekomanApp.Database
 {
     public class RegUserTable
     {

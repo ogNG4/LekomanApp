@@ -11,6 +11,7 @@
             VerticalOptions="StartAndExpand">
 
             <Label Text="Lek" />
+          
             <Entry Text="{Binding Lek}" />
 
             <Label Text="Dawka" />
@@ -30,7 +31,7 @@
 
         <Button Clicked="OnCancelClicked" CornerRadius="50"  TextColor="white" BackgroundColor="#093861" Text="Wyjdź" />
 
-            <Button  Clicked="Exit_Clicked" CornerRadius="50"  TextColor="white" BackgroundColor="#093861" Text="Wyjdź"/>
+            <Button  Clicked="Exit_Clicked" CornerRadius="50"  TextColor="white" BackgroundColor="#cf4b42" Text="Wyloguj"/>
 
         </StackLayout>
     </ContentPage.Content>
