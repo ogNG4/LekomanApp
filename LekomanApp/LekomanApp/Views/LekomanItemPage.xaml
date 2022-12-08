@@ -17,6 +17,14 @@
             <Label Text="Dawka" />
             <Entry Text="{Binding Dawka}" />
 
+            <Label Text="Data"/>
+            <Entry Text="{Binding Data}"/>
+
+            <Label Text="Godzina"/>
+            <Entry Text="{Binding Godzina}"/>
+
+
+
             <StackLayout Orientation="Horizontal">
                 <Label
                     Margin="0,10"

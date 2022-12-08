@@ -18,6 +18,9 @@ namespace LekomanApp
             instance = new Lazy<Task<T>>(() => Task.Run(factory));
         }
 
+       
+
+
         public TaskAwaiter<T> GetAwaiter()
         {
             return instance.Value.GetAwaiter();

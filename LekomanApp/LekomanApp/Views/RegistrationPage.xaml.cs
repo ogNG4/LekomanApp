@@ -40,9 +40,9 @@ namespace LekomanApp.Views
             db.Insert(item);
             Device.BeginInvokeOnMainThread(async () => {
 
-                var result = await this.DisplayAlert("Gratulacje", "Rejestracja przebiegła pomyślnie", "OK", "Anuluj");
+                var resultPositive = await this.DisplayAlert("Gratulacje", "Rejestracja przebiegła pomyślnie", "OK", "Anuluj");
 
-                if (result)
+                if (resultPositive)
                     await Navigation.PushAsync(new LoginPage());
             });
         }
