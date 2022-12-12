@@ -7,6 +7,7 @@ using LekomanApp.Models;
 using LekomanApp.Data;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace LekomanApp.Views
 {
@@ -16,6 +17,7 @@ namespace LekomanApp.Views
         public LekomanItemPage()
         {
             InitializeComponent();
+            
         }
 
         async void OnSaveClicked(object sender, EventArgs e)
@@ -24,6 +26,7 @@ namespace LekomanApp.Views
             LekomanItemDatabase database = await LekomanItemDatabase.Instance;
             await database.SaveItemAsync(lekomanItem);
             await Navigation.PopAsync();
+            
         }
 
         async void OnDeleteClicked(object sender, EventArgs e)
@@ -43,5 +46,9 @@ namespace LekomanApp.Views
         {
             await Navigation.PushAsync(new LoginPage());
         }
+        
+        
     }
+
+
 }

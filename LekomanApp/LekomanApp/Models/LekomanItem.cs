@@ -1,5 +1,5 @@
 ﻿using SQLite;
-
+using System;
 
 
 namespace LekomanApp.Models
@@ -13,10 +13,16 @@ namespace LekomanApp.Models
 
         public string Dawka { get; set; }
 
-        public string Data { get; set; }
+        public DateTime Data { get; set; }
 
-        public string Godzina { get; set; }
+        public TimeSpan Godzina { get; set; }
+       
 
-        public bool Zrobione { get; set; }
+
+
+
+       
+
+       
     }
 }

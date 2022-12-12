@@ -17,7 +17,7 @@
 
     <ListView
         x:Name="listView"
-        Margin="10"
+        Margin="5"
         ItemSelected="OnListItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
@@ -26,23 +26,39 @@
                     
                    
 
-                    <FlexLayout
-                       Direction="Column" >
+
+
+                    <StackLayout
+                        Margin="20,0,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+
+
                         <Label HorizontalOptions="Start" FontSize="15" TextColor="Black" Text="Lek: " />
                         <Label HorizontalOptions="StartAndExpand" FontSize="15" TextColor="DarkBlue" Text="{Binding Lek}" />
 
                         <Label HorizontalOptions="Start" FontSize="15" TextColor="Black" Text="Dawka: " />
                         <Label HorizontalOptions="StartAndExpand" FontSize="15" TextColor="DarkBlue" Text="{Binding Dawka}" />
 
-                        <Label HorizontalOptions="Start" FontSize="15" TextColor="Black" Text="Data: " />
-                        <Label HorizontalOptions="StartAndExpand" FontSize="15" TextColor="DarkBlue" Text="{Binding Data}" />
-
-                        <Label HorizontalOptions="Start" FontSize="15" TextColor="Black" Text="Godzina: " />
+                        <Label HorizontalOptions="Start" FontSize="15" TextColor="Black" Text="Date: " />
+                        <Label HorizontalOptions="StartAndExpand" FontSize="15" TextColor="DarkBlue" Text="{Binding Data, StringFormat='{0:dddd, dd MMMM yyyy}'}" />
+                        
+                        <Label HorizontalOptions="Start" FontSize="15" TextColor="Black" Text="Time: " />
                         <Label HorizontalOptions="StartAndExpand" FontSize="15" TextColor="DarkBlue" Text="{Binding Godzina}" />
+                        
 
 
-                    </FlexLayout>
+                        <Image
+                            HorizontalOptions="End"
+                            
+                            IsVisible="{Binding Zrobione}"
+                            Source="check.png" 
+                            WidthRequest="20"
+                            />
+
+                    </StackLayout>
                 </ViewCell>
+                
             </DataTemplate>
 
         </ListView.ItemTemplate>

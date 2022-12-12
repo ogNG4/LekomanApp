@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="LekomanApp.Views.LekomanItemPage"
              Title="{Binding Lek}"
              BackgroundColor="#9ac3e6">
@@ -17,11 +18,22 @@
             <Label Text="Dawka" />
             <Entry Text="{Binding Dawka}" />
 
-            <Label Text="Data"/>
-            <Entry Text="{Binding Data}"/>
+            <Label Text="Data" />
+            <DatePicker Date="{Binding Data}"
+                        MinimumDate="{x:Static sys:DateTime.Now}"/>
 
-            <Label Text="Godzina"/>
-            <Entry Text="{Binding Godzina}"/>
+            <Label Text="Godzina" />
+            <TimePicker Time="{Binding Godzina}"/>
+
+
+
+
+
+
+
+
+
+
 
 
 
