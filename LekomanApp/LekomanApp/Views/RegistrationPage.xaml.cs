@@ -1,4 +1,4 @@
-﻿using LekomanApp.Tables;
+﻿using LekomanApp.Database;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace LekomanApp.Views
 
         void Button_Clicked(object sender, EventArgs e)
         {
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "UserDatabase.db");
             var db = new SQLiteConnection(dbpath);
             db.CreateTable<RegUserTable>();
 
@@ -39,9 +39,9 @@ namespace LekomanApp.Views
             db.Insert(item);
             Device.BeginInvokeOnMainThread(async () => {
 
-                var result = await this.DisplayAlert("Gratulacje", "Rejestracja przebiegła pomyślnie", "OK", "Anuluj");
+                var resultPositive = await this.DisplayAlert("Gratulacje", "Rejestracja przebiegła pomyślnie", "OK", "Anuluj");
 
-                if (result)
+                if (resultPositive)
                     await Navigation.PushAsync(new LoginPage());
             });
         }

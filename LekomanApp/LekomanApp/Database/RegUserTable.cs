@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LekomanApp.Tables
+namespace LekomanApp.Database
 {
     public class RegUserTable
     {
@@ -10,9 +10,6 @@ namespace LekomanApp.Tables
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        
-
-
 
     }
 
